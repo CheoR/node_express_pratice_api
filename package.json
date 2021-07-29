@@ -4,12 +4,13 @@
   "description": "crm-pratice",
   "main": "index.jsx",
   "scripts": {
-	"start": "nodemon ./server.jsx --exec babel-node -e jsx",
+    "start": "nodemon ./server.jsx --exec babel-node -e jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "CheoR",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongodb": "^4.0.1",
     "mongoose": "^5.13.4",
