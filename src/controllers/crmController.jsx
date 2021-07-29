@@ -25,3 +25,16 @@ export const getContacts = (req, res) => {
   res.json(contact);
  });
 }
+
+export const getContactById = (req, res) => {
+ /*
+  {} - return all, else return whatever fits the parameter
+ */
+ const contactId = req.params.contactId;
+ Contact.findById(contactId, (err, contact) => {
+  if(err) {
+   res.send(err);
+  }
+  res.json(contact);
+ });
+}
