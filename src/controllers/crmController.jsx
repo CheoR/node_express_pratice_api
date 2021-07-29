@@ -38,3 +38,16 @@ export const getContactById = (req, res) => {
   res.json(contact);
  });
 }
+
+export const updateContact = (req, res) => {
+ /*
+  { new: true } - return updated object
+ */
+ const contactId = req.params.contactId;
+ Contact.findOneAndUpdate({_id: contactId}, req.body, { new: true, useFindAndModify: false}, (err, contact) => {
+  if(err) {
+   res.send(err);
+  }
+  res.json(contact);
+ });
+}
