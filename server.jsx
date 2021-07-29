@@ -33,6 +33,10 @@ app.get('/', (req, res) => {
   res.send(`Node/Express server running on port ${PORT} . . . .`);
 });
 
+mongoose.connect(uri, {}, (err) => {
+	console.log('mongo db connection', err)
+})
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
