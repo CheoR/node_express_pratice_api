@@ -2,7 +2,7 @@ require('dotenv').config();
 
 import express from 'express';
 import routes from './src/routes/crmRoutes';
-// import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
 // const { MongooseClient } = require('mongodb');
 const app = express();
