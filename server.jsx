@@ -29,6 +29,11 @@ app.use(express.urlencoded({extended: false}));
 
 routes(app);
 
+// serve static
+app.use(express.static('public'));
+// app.use(express.static('public'));
+// app.use('/images', express.static('images'));																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								)
+
 app.get('/', (req, res) => {
   res.send(`Node/Express server running on port ${PORT} . . . .`);
 });
@@ -37,6 +42,6 @@ mongoose.connect(uri, {}, (err) => {
 	console.log('mongo db connection', err)
 })
 
-app.listen(PORT, () => {
+app.listen(PORT, () => {									
   console.log(`Server running on port ${PORT}`);
 });

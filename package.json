@@ -5,7 +5,8 @@
   "main": "index.jsx",
   "scripts": {
     "start": "nodemon ./server.jsx --exec babel-node -e jsx",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "DEBUG=express:* nodemon ./server.jsx --exec babel-node -e jsx"
   },
   "author": "CheoR",
   "license": "ISC",
